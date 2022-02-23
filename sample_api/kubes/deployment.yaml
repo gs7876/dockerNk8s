@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: gs7876-sample-api-deployment
+  labels:
+    app: sample-api
+    type: restapi
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sample-api
+  template:
+    metadata:
+      labels:
+        app: sample-api
+    spec:
+      containers:
+        - name: gs7876-sample-api-pod
+          image: gs7876/sample-api:2.0.0
+#          resources:
+#            requests:
+#              memory: "64Mi"
+#              cpu: "250m"
+#            limits:
+#              memory: "128Mi"
+#              cpu: "500m"
+
+
+
+# kubectl rollout undo deployment.apps/gs7876-sample-api-deployment
+# kubectl rollout history deployment.apps/gs7876-sample-api-deployment
+# kubectl rollout status deployment.apps/gs7876-sample-api-deployment

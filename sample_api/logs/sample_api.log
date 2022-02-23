@@ -1,0 +1,16 @@
+2022-02-23 12:37:59,100 - ifdpOncall - werkzeug - INFO      * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2022-02-23 12:37:59,101 - ifdpOncall - werkzeug - INFO      * Restarting with stat
+2022-02-23 12:37:59,286 - ifdpOncall - werkzeug - WARNING   * Debugger is active!
+2022-02-23 12:37:59,293 - ifdpOncall - werkzeug - INFO      * Debugger PIN: 455-286-285
+2022-02-23 12:38:06,410 - ifdpOncall - sample api - INFO     hostname=intul18ad4f52b ip_address=172.31.63.134, current_date_time=23/02/2022 - 12:38:06 api_version=api/V3
+2022-02-23 12:38:06,411 - ifdpOncall - werkzeug - INFO     127.0.0.1 - - [23/Feb/2022 12:38:06] "[37mGET /getDetail HTTP/1.1[0m" 200 -
+2022-02-23 12:38:06,573 - ifdpOncall - sample api - INFO     hostname=intul18ad4f52b ip_address=172.31.63.134, current_date_time=23/02/2022 - 12:38:06 api_version=api/V3
+2022-02-23 12:38:06,574 - ifdpOncall - werkzeug - INFO     127.0.0.1 - - [23/Feb/2022 12:38:06] "[37mGET /getDetail HTTP/1.1[0m" 200 -
+2022-02-23 12:38:06,722 - ifdpOncall - sample api - INFO     hostname=intul18ad4f52b ip_address=172.31.63.134, current_date_time=23/02/2022 - 12:38:06 api_version=api/V3
+2022-02-23 12:38:06,722 - ifdpOncall - werkzeug - INFO     127.0.0.1 - - [23/Feb/2022 12:38:06] "[37mGET /getDetail HTTP/1.1[0m" 200 -
+2022-02-23 12:38:06,849 - ifdpOncall - sample api - INFO     hostname=intul18ad4f52b ip_address=172.31.63.134, current_date_time=23/02/2022 - 12:38:06 api_version=api/V3
+2022-02-23 12:38:06,850 - ifdpOncall - werkzeug - INFO     127.0.0.1 - - [23/Feb/2022 12:38:06] "[37mGET /getDetail HTTP/1.1[0m" 200 -
+2022-02-23 12:38:06,989 - ifdpOncall - sample api - INFO     hostname=intul18ad4f52b ip_address=172.31.63.134, current_date_time=23/02/2022 - 12:38:06 api_version=api/V3
+2022-02-23 12:38:06,990 - ifdpOncall - werkzeug - INFO     127.0.0.1 - - [23/Feb/2022 12:38:06] "[37mGET /getDetail HTTP/1.1[0m" 200 -
+2022-02-23 12:47:43,013 - ifdpOncall - sample api - INFO     hostname=intul18ad4f52b ip_address=172.31.63.134, current_date_time=23/02/2022 - 12:47:43 api_version=api/V3
+2022-02-23 12:47:43,014 - ifdpOncall - werkzeug - INFO     127.0.0.1 - - [23/Feb/2022 12:47:43] "[37mGET /getDetail HTTP/1.1[0m" 200 -

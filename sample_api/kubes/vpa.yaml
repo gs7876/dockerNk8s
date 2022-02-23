@@ -1,0 +1,42 @@
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: sample-api-rec-vpa
+spec:
+  targetRef:
+    apiVersion: "apps/v1"
+    kind:       Deployment
+    name:       gs7876-sample-api-deployment
+  updatePolicy:
+    updateMode: "Off"
+
+
+# https://www.velotio.com/engineering-blog/autoscaling-in-kubernetes-using-hpa-vpa
+
+# Recommendation:
+#    Container Recommendations:
+#      Container Name:  gs7876-sample-api-pod
+#      Lower Bound:
+#        Cpu:     25m
+#        Memory:  262144k
+#      Target:
+#        Cpu:     25m
+#        Memory:  262144k
+#      Uncapped Target:
+#        Cpu:     25m
+#        Memory:  262144k
+#      Upper Bound:
+#        Cpu:     4163m
+#        Memory:  8971524916
+
+# Target: The recommended CPU request and memory request for the container that will be applied to the pod by VPA.
+
+# Uncapped Target: The recommended CPU request and memory request for the container if you didn’t configure upper/lower limits in the VPA definition.
+#                 These values will not be applied to the pod. They’re used only as a status indication.
+
+# Lower Bound: The minimum recommended CPU request and memory request for the container.
+#             There is a --pod-recommendation-min-memory-mb flag that determines the minimum amount of memory the recommender will set—it defaults to 250MiB.
+
+# Upper Bound: The maximum recommended CPU request and memory request for the container.
+#              It helps the VPA updater avoid eviction of pods that are close to the recommended target values.
+#              Eventually, the Upper Bound is expected to reach close to target recommendation.

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gs7876
+  labels:
+    name: my.gs7876.namespace
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

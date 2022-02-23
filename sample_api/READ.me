@@ -1,0 +1,15 @@
+$ sudo docker build --tag gs7876-sample-api .
+$ sudo docker run --name gs7876-sample-api -p 9090:9090 gs7876-sample-api
+
+// Publish to docker hub
+$ docker tag gs7876-sample-api gs7876/sample-api
+$ docker push gs7876/sample-api
+
+$ docker ps -a // List all docker container
+$ docker stop jaeger // stops docker container
+$ docker rm jaeger // remove docker container
+$ docker exec -it 9559cbe04980 /bin/sh; exit
+
+
+
+kubectl exec -it gs7876-pods -- /bin/sh; exit

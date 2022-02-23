@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: gs7876-sample-api-replicaset
+  labels:
+    app: sample-api
+    type: restapi
+
+spec:
+  template:
+    metadata:
+      name: gs7876-sample-api-pod
+      labels:
+        app: sample-api
+        type: restapi
+      namespace: gs7876
+    spec:
+      containers:
+        - name: gs7876-sample-api-pod
+          image: gs7876/sample-api
+  replicas: 3
+  selector:
+    matchLabels:
+      type: restapi
