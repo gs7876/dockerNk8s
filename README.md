@@ -1,6 +1,25 @@
 # Important notes
 
-**docker build image**
+### Install minicube
+
+> curl -LO [https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64](https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64)
+
+> sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+
+### Operate minicube
+
+* > minikube start OR minikube start --cpus 6 --memory 8192
+* > minikube stop
+* > minikube delete
+* > more /.kube/config
+* > export KUBECONFIG=/.kube/config
+* > minikube dashboard
+* > minikube ssh
+* > sudo vi /etc/systemd/network/[10-eth1.network](http://10-eth1.network) add DNS=8.8.8.8 under [Network]
+* > sudo vi /etc/systemd/network/[20-dhcp.network](http://20-dhcp.network) add DNS=8.8.8.8 under [Network]
+* > sudo systemctl restart systemd-networkd
+
+### docker build image
 
 > sudo docker build --tag gs7876-sample-api .
 
@@ -8,11 +27,11 @@
 
 > docker push gs7876/sample-api:1.0.0
 
-**docker run**
+### docker run
 
 docker run -p 8080:9090 gs7876-sample-api
 
-> 8080 is local port to access http://0.0.0.0:8080/health/full 
+> 8080 is local port to access http://0.0.0.0:8080/health/full
 
 > 9090 is comntainer port
 
