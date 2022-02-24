@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gs7876sample-app-deployment
+  labels:
+    app: sample-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sample-app
+  template:
+    metadata:
+      labels:
+        app: sample-app
+    spec:
+      containers:
+      - name: gs7876-sample-api
+        image: gs7876bksc/gs7876-repository:1.0.0 # got this from docker pull command
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9090
