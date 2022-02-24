@@ -4,50 +4,45 @@
 
 ### Install minicube
 
-> curl -LO [https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64](https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64)
-
-> sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+```
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+```
 
 ### Operate minicube
 
-* > minikube start OR minikube start --cpus 6 --memory 8192
-  >
-* > minikube stop
-  >
-* > minikube delete
-  >
-* > more /.kube/config
-  >
-* > export KUBECONFIG=/.kube/config
-  >
-* > minikube dashboard
-  >
-* > minikube ssh
-  >
-* > sudo vi /etc/systemd/network/[10-eth1.network](http://10-eth1.network) add DNS=8.8.8.8 under [Network]
-  >
-* > sudo vi /etc/systemd/network/[20-dhcp.network](http://20-dhcp.network) add DNS=8.8.8.8 under [Network]
-  >
-* > sudo systemctl restart systemd-networkd
-  >
+```
+minikube start OR minikube start --cpus 6 --memory 8192
+minikube stopminikube delete
+more /.kube/configexport 
+KUBECONFIG=/.kube/config
+minikube dashboard
+minikube ssh
+sudo vi /etc/systemd/network/10-eth1.network 
+add DNS=8.8.8.8 under [Network]
+
+sudo vi /etc/systemd/network/20-dhcp.network 
+add DNS=8.8.8.8 under [Network]
+
+sudo systemctl restart systemd-networkd
+```
 
 ## Docker
 
 ### docker build image
 
-> sudo docker build --tag gs7876-sample-api .
-
-> docker tag gs7876-sample-api gs7876/sample-api:1.0.0
-
-> docker push gs7876/sample-api:1.0.0
+```
+sudo docker build --tag gs7876-sample-api .
+docker tag gs7876-sample-api gs7876/sample-api:1.0.0
+docker push gs7876/sample-api:1.0.0
+```
 
 ### docker run
 
-> docker run -p 8080:9090 gs7876-sample-api
-
-> 8080 is local port to access http://0.0.0.0:8080/health/full
-
-> 9090 is comntainer port
+```
+docker run -p 8080:9090 gs7876-sample-api
+** 8080 is local port to access http://0.0.0.0:8080/health/full
+** 9090 is comntainer port
+```
 
 | Flag value                        | Description                                                                                                                                     |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -69,11 +64,14 @@ In Kubernetes, *namespaces* provides a mechanism for isolating groups of resourc
 Setting the namespace preferenceYou can permanently save the namespace for all subsequent kubectl commands in that
 context.
 
-> gsingh5@intul18ad4f52b deployment % kubectl config set-context --current --namespace=gs7876
-> Context "minikube" modified.
->
-> gsingh5@intul18ad4f52b deployment % kubectl config view --minify | grep namespace:
-> namespace: gs7876
+```
+gsingh5@intul18ad4f52b deployment % kubectl config set-context --current --namespace=gs7876
+Context "minikube" modified.
+
+gsingh5@intul18ad4f52b deployment % kubectl config view --minify | grep namespace:
+namespace: gs7876
+```
+
 
 ### ReplicaSet
 
@@ -147,6 +145,10 @@ gsingh5@intul18ad4f52b comprehension-insight % minikube service gs7876-sample-se
 http://127.0.0.1:49181/health/full
 ```
 
-Kubernetes Volume ManagementIngress
+
+
+### Kubernetes Volume Management
+
+### Ingress
 
 ### ConfigMaps and Secrets
